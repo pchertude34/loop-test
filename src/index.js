@@ -19,7 +19,7 @@ async function runner() {
     });
   }
 
-  fs.writeFileSync('../output.json', JSON.stringify(resultData), 'utf8');
+  fs.writeFileSync('./output.json', JSON.stringify(resultData), 'utf8');
   createCsv();
 }
 
