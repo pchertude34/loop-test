@@ -111,22 +111,22 @@ async function main(data, loops = 1000, doLog = false) {
       average: (totalTraditionalDuration / loops).toFixed(5),
     },
     {
-      loop: 'Enhanced For Loop',
+      loop: 'For in Loop',
       duration: totalForInDuration.toFixed(5),
       average: (totalForInDuration / loops).toFixed(5),
     },
     {
-      loop: 'Enhanced For Loop using Entries',
+      loop: 'For of Loop',
       duration: totalForOfDuration.toFixed(5),
       average: (totalForOfDuration / loops).toFixed(5),
     },
     {
-      loop: 'For Each Loop',
+      loop: 'For Each Loop Using Keys',
       duration: totalForEachKeysDuration.toFixed(5),
       average: (totalForEachKeysDuration / loops).toFixed(5),
     },
     {
-      loop: 'For Each Loop using Entries',
+      loop: 'For Each Loop Using Entries',
       duration: totalForEachEntriesDuration.toFixed(5),
       average: (totalForEachEntriesDuration / loops).toFixed(5),
     },
@@ -141,17 +141,17 @@ async function main(data, loops = 1000, doLog = false) {
   return {
     average: {
       'Traditional For Loop': totalTraditionalDuration / loops,
-      'Enhanced For Loop': totalForInDuration / loops,
-      'Enhanced For Loop with Entries:': totalForOfDuration / loops,
-      'For Each Loop': totalForEachKeysDuration / loops,
-      'For Each Loop with Entries': totalForEachEntriesDuration / loops,
+      'For in Loop': totalForInDuration / loops,
+      'For of Loop': totalForOfDuration / loops,
+      'For Each Loop Using Keys': totalForEachKeysDuration / loops,
+      'For Each Loop Using Entries': totalForEachEntriesDuration / loops,
     },
     duration: {
       'Traditional For Loop': totalTraditionalDuration,
-      'Enhanced For Loop': totalForInDuration,
-      'Enhanced For Loop with Entries:': totalForOfDuration,
-      'For Each Loop': totalForEachKeysDuration,
-      'For Each Loop with Entries': totalForEachEntriesDuration,
+      'For in Loop': totalForInDuration,
+      'For of Loop': totalForOfDuration,
+      'For Each Loop Using Keys': totalForEachKeysDuration,
+      'For Each Loop Using Entries': totalForEachEntriesDuration,
     },
   };
 }
